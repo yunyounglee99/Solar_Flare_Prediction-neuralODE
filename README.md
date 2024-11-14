@@ -1,1 +1,1 @@
-# Solar-Flare-Prediction---neural-ODE
+# Solar_Flare_Prediction-neuralODE
