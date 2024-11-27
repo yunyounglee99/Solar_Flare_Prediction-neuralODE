@@ -1,4 +1,4 @@
-### 이윤영 - Neural Ordinary Differention Equations
+## 이윤영 - Neural Ordinary Differention Equations
 
 # 1. Introduction
 
