@@ -81,36 +81,36 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 ## 🧪 Experiments
 
-	•	Boundary-condition weight (\lambda_\text{div} = 0.1) (balance bias vs. noise)
-	•	Grid resolution: (64\times64) vs. (128\times128)
-	•	Batch size: 8
-	•	Learning rate: (1\times10^{-3})
+•	Boundary-condition weight (\lambda_\text{div} = 0.1) (balance bias vs. noise)
+•	Grid resolution: (64\times64) vs. (128\times128)
+•	Batch size: 8
+•	Learning rate: (1\times10^{-3})
 
 ⸻
 
 ## 🎯 Results & Insights
 
-	•	Reduced overfitting compared to Conv-RNN baseline on limited data (~200 time steps).
-	•	Qualitative fidelity: magnetogram predictions align closely with ground truth (see visualizations/).
-	•	Physical consistency: divergence loss keeps (\nabla\cdot \mathbf{B}) near zero (<1e-3 average).
-	•	Adaptive cost: solver calls (NFE) adjust per tolerance; overall training remains tractable.
+•	Reduced overfitting compared to Conv-RNN baseline on limited data (~200 time steps).
+•	Qualitative fidelity: magnetogram predictions align closely with ground truth (see visualizations/).
+•	Physical consistency: divergence loss keeps (\nabla\cdot \mathbf{B}) near zero (<1e-3 average).
+•	Adaptive cost: solver calls (NFE) adjust per tolerance; overall training remains tractable.
 
 ⸻
 
 ## ⚠️ Limitations & Future Work
 
-	•	Data scarcity: only ~200 time steps → consider temporal augmentation.
-	•	Task variance: loss curves exhibit fluctuations—investigate solver tolerances and regularization.
-	•	Divergence trade-off: stronger (\lambda_\text{div}) can introduce smoothing artifacts; explore adaptive weighting.
-	•	Inference speed: test fixed-step RK4 for faster deployment.
+•	Data scarcity: only ~200 time steps → consider temporal augmentation.
+•	Task variance: loss curves exhibit fluctuations—investigate solver tolerances and regularization.
+•	Divergence trade-off: stronger (\lambda_\text{div}) can introduce smoothing artifacts; explore adaptive weighting.
+•	Inference speed: test fixed-step RK4 for faster deployment.
 
 ---
 
 ## 🙋‍♀️ Authors & Contributions
 
-	•	Yun-Young Lee (2019160102)
+•	Yun-Young Lee (2019160102)
 	•	Model design, divergence-based loss
 	•	Hyperparameter tuning & overfitting experiments
-	•	Mi-Young Choi (2020160150)
+•	Mi-Young Choi (2020160150)
 	•	Data collection & preprocessing
 	•	Visualization & solver analysis
