@@ -107,8 +107,11 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 ## ⚠️ Limitations & Future Work
 
 •	Data scarcity: only ~200 time steps → consider temporal augmentation.
+
 •	Task variance: loss curves exhibit fluctuations—investigate solver tolerances and regularization.
+
 •	Divergence trade-off: stronger (\lambda_\text{div}) can introduce smoothing artifacts; explore adaptive weighting.
+
 •	Inference speed: test fixed-step RK4 for faster deployment.
 
 ---
