@@ -22,9 +22,9 @@ This repository implements a **Neural Ordinary Differential Equation** (Neural O
 
 - **Why Neural ODE?**  
   - Models the instantaneous rate of change:  
-    \[
+    $
       \frac{d\mathbf{h}(t)}{dt} = f_\theta(\mathbf{h}(t), t)
-    \]  
+    $  
   - Supports **adaptive time stepping** (e.g., Dormand–Prince solver)  
   - Reduces memory via the **adjoint sensitivity method**  
   - Naturally enforces **smooth, physically plausible predictions**
