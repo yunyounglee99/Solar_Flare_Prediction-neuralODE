@@ -34,11 +34,11 @@ This repository implements a **Neural Ordinary Differential Equation** (Neural O
 We use the **HMI** (Helioseismic and Magnetic Imager) vector magnetogram data from NASA’s Solar Dynamics Observatory:
 
 1. **Data Selection**  
-   - Extract 2D grids of \(B_x\), \(B_y\), and \(B_z\) at each timestamp.
+   - Extract 2D grids of $B_x$, $B_y$, and $B_z$ at each timestamp.
 2. **Preprocessing**  
    - Normalize each channel to zero mean, unit variance.  
-   - Resample to a consistent grid size (e.g., \(128 \times 128\)).  
-   - Stack into a \((3, H, W)\) tensor per time step.
+   - Resample to a consistent grid size (e.g., $128 \times 128$).  
+   - Stack into a $(3, H, W)$ tensor per time step.
 
 ---
 
