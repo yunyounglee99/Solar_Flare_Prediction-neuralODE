@@ -84,6 +84,7 @@ On a 2D surface we enforce:
 ⸻
 
 ## 🧪 Experiments
+
 	•	Boundary-condition weight (\lambda_\text{div} = 0.1) (balance bias vs. noise)
 	•	Grid resolution: (64\times64) vs. (128\times128)
 	•	Batch size: 8
@@ -92,6 +93,7 @@ On a 2D surface we enforce:
 ⸻
 
 ## 🎯 Results & Insights
+
 	•	Reduced overfitting compared to Conv-RNN baseline on limited data (~200 time steps).
 	•	Qualitative fidelity: magnetogram predictions align closely with ground truth (see visualizations/).
 	•	Physical consistency: divergence loss keeps (\nabla\cdot \mathbf{B}) near zero (<1e-3 average).
@@ -100,6 +102,7 @@ On a 2D surface we enforce:
 ⸻
 
 ## ⚠️ Limitations & Future Work
+
 	•	Data scarcity: only ~200 time steps → consider temporal augmentation.
 	•	Task variance: loss curves exhibit fluctuations—investigate solver tolerances and regularization.
 	•	Divergence trade-off: stronger (\lambda_\text{div}) can introduce smoothing artifacts; explore adaptive weighting.
@@ -108,6 +111,7 @@ On a 2D surface we enforce:
 ---
 
 ## 🙋‍♀️ Authors & Contributions
+
 	•	Yun-Young Lee (2019160102)
 	•	Model design, divergence-based loss
 	•	Hyperparameter tuning & overfitting experiments
