@@ -67,11 +67,12 @@ $$\nabla\cdot \hat{\mathbf{h}}(t)= \frac{\partial \hat B_x}{\partial x}$$
 ]
 On a 2D surface we enforce:
 
-$$\mathcal{L}\text{div} = \lambda\text{div},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
+$$\mathcal{L}_{\text{div}} = \lambda_{\text{div}},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
 
-	3.	Total Loss
+	
+ 	3.	Total Loss
 
-$$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
+$$\mathcal{L} = \mathcal{L}_{\text{MSE}} + \mathcal{L}_{\text{div}}$$
 
 
 ⸻
