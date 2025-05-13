@@ -6,7 +6,7 @@ _A physics-informed, continuous-time model for forecasting the Sun’s surface m
 
 ## 📄 Overview
 
-This repository implements a **Neural Ordinary Differential Equation** (Neural ODE) to predict the temporal evolution of the solar magnetic field components \([B_x, B_y, B_z]\). By learning continuous dynamics directly from time-series magnetogram data, our approach captures fine-grained temporal patterns and enforces physical consistency via a divergence-based regularization.
+This repository implements a **Neural Ordinary Differential Equation** (Neural ODE) to predict the temporal evolution of the solar magnetic field components $[B_x, B_y, B_z]$. By learning continuous dynamics directly from time-series magnetogram data, our approach captures fine-grained temporal patterns and enforces physical consistency via a divergence-based regularization.
 
 ---
 
