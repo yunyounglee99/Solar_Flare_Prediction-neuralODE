@@ -58,6 +58,7 @@ We combine standard data fidelity (MSE) with a divergence loss to enforce the ph
 1.	Mean Squared Error (MSE)
 
 $$\mathcal{L}_\text{MSE} = |\hat{\mathbf{h}} - \mathbf{h}|_2^2$$
+
 2.	Divergence Loss
 Solar magnetic fields are divergence-free ((\nabla\cdot \mathbf{B} = 0)). We approximate divergence on the 2D grid:
 
