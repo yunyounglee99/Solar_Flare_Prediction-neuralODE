@@ -46,37 +46,32 @@ We use the **HMI** (Helioseismic and Magnetic Imager) vector magnetogram data fr
 
 ### 1. Convolutional ODE Function
 
-We define the ODE function \(f_\theta\) as a small convolutional network that concatenates a time channel:
+We define the ODE function $f_\theta$ as a small convolutional network that concatenates a time channel:
 
 ### 2. Neural ODE Solver
 
-We integrate (\dot{\mathbf{h}} = f_\theta(\mathbf{h}, t)) using an adaptive solver (dopri5) from torchdiffeq
+We integrate $$dot{\mathbf{h}} = f_\theta(\mathbf{h}, t)$$ using an adaptive solver (dopri5) from torchdiffeq
 
 ### 3. Physics-Informed Loss
 
-We combine standard data fidelity (MSE) with a divergence loss to enforce the physical law (\nabla \cdot \mathbf{B} = 0):
+We combine standard data fidelity (MSE) with a divergence loss to enforce the physical law $\nabla \cdot \mathbf{B} = 0$:
 	1.	Mean Squared Error (MSE)
-[
-\mathcal{L}_\text{MSE} = |\hat{\mathbf{h}} - \mathbf{h}|_2^2
-]
+
+$$\mathcal{L}_\text{MSE} = |\hat{\mathbf{h}} - \mathbf{h}|_2^2$$
 	2.	Divergence Loss
 Solar magnetic fields are divergence-free ((\nabla\cdot \mathbf{B} = 0)). We approximate divergence on the 2D grid:
-[
-\nabla\cdot \hat{\mathbf{h}}(t)
-= \frac{\partial \hat B_x}{\partial x}
-	•	\frac{\partial \hat B_y}{\partial y}
-	•	\frac{\partial \hat B_z}{\partial z}\approx 0
+
+$$\nabla\cdot \hat{\mathbf{h}}(t)= \frac{\partial \hat B_x}{\partial x}$$
+	•	$\frac{\partial \hat B_y}{\partial y}$
+	•	$\frac{\partial \hat B_z}{\partial z}\approx 0$
 ]
 On a 2D surface we enforce:
-[
-\mathcal{L}\text{div}
-= \lambda\text{div},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2
-]
+
+$$\mathcal{L}\text{div} = \lambda\text{div},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
 
 	3.	Total Loss
-[
-\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}
-]
+
+$$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 
 ⸻
