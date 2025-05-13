@@ -55,10 +55,10 @@ We integrate $$dot{\mathbf{h}} = f_\theta(\mathbf{h}, t)$$ using an adaptive sol
 ### 3. Physics-Informed Loss
 
 We combine standard data fidelity (MSE) with a divergence loss to enforce the physical law $\nabla \cdot \mathbf{B} = 0$:
-	1.	Mean Squared Error (MSE)
+1.	Mean Squared Error (MSE)
 
 $$\mathcal{L}_\text{MSE} = |\hat{\mathbf{h}} - \mathbf{h}|_2^2$$
-	2.	Divergence Loss
+2.	Divergence Loss
 Solar magnetic fields are divergence-free ((\nabla\cdot \mathbf{B} = 0)). We approximate divergence on the 2D grid:
 
 $$\nabla\cdot \hat{\mathbf{h}}(t)= \frac{\partial \hat B_x}{\partial x}$$
@@ -67,12 +67,12 @@ $$\nabla\cdot \hat{\mathbf{h}}(t)= \frac{\partial \hat B_x}{\partial x}$$
 ]
 On a 2D surface we enforce:
 
-$$\mathcal{L}_{\text{div}} = \lambda_{\text{div}},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
+$$\mathcal{L}\text{div} = \lambda\text{div},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
 
 	
- 	3.	Total Loss
+ 3.	Total Loss
 
-$$\mathcal{L} = \mathcal{L}_{\text{MSE}} + \mathcal{L}_{\text{div}}$$
+$$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 
 ⸻
