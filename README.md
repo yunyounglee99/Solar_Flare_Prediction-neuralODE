@@ -35,7 +35,8 @@ This repository implements a **Neural Ordinary Differential Equation** (Neural O
 
 ## 📊 Dataset
 
-<img width="518" alt="스크린샷 2025-05-14 오전 10 20 30" src="https://github.com/user-attachments/assets/f3f4ecff-eaae-4c7d-be67-55993b642d9a" />
+![image](https://github.com/user-attachments/assets/9da24f8f-58eb-4d10-b0bf-51928149cd77)
+
 
 <img width="838" alt="스크린샷 2025-05-14 오전 10 41 38" src="https://github.com/user-attachments/assets/b1de4478-3de2-437d-855b-ea30d9a67b54" />
 
