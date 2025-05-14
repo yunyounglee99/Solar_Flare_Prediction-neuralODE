@@ -81,13 +81,13 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 ## 🧪 Experiments
 
-•	Boundary-condition weight (\lambda_\text{div} = 0.1) (balance bias vs. noise)
+•	Boundary-condition weight $\lambda_\text{div} = 0.1$ (balance bias vs. noise)
 
-•	Grid resolution: (64\times64) vs. (128\times128)
+•	Grid resolution: $64\times64$ vs. $128\times128$
 
 •	Batch size: 8
 
-•	Learning rate: (1\times10^{-3})
+•	Learning rate: $1\times10^{-3}$
 
 
 ⸻
@@ -98,7 +98,7 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 •	Qualitative fidelity: magnetogram predictions align closely with ground truth (see visualizations/).
 
-•	Physical consistency: divergence loss keeps (\nabla\cdot \mathbf{B}) near zero (<1e-3 average).
+•	Physical consistency: divergence loss keeps $\nabla\cdot \mathbf{B}4 near zero (<1e-3 average).
 
 •	Adaptive cost: solver calls (NFE) adjust per tolerance; overall training remains tractable.
 
@@ -110,7 +110,7 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 •	Task variance: loss curves exhibit fluctuations—investigate solver tolerances and regularization.
 
-•	Divergence trade-off: stronger (\lambda_\text{div}) can introduce smoothing artifacts; explore adaptive weighting.
+•	Divergence trade-off: stronger $\lambda_\text{div}$ can introduce smoothing artifacts; explore adaptive weighting.
 
 •	Inference speed: test fixed-step RK4 for faster deployment.
 
