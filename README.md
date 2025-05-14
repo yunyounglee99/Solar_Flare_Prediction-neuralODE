@@ -110,7 +110,7 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 ### Prediction Result
 
-<img width="518" alt="스크린샷 2025-05-14 오전 10 20 30" src="https://github.com/user-attachments/assets/f3f4ecff-eaae-4c7d-be67-55993b642d9a" />
+<img width="907" alt="스크린샷 2025-05-14 오전 11 04 23" src="https://github.com/user-attachments/assets/ba741eb6-ac42-48e2-aabd-13b299b97204" />
 
 - The grid size increases, the loss tends to be higher.
 - Even a 10-unit difference in grid size leads to an exponential increase in data complexity.
