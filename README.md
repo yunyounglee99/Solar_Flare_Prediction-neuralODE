@@ -69,12 +69,12 @@ $$\nabla\cdot \hat{\mathbf{h}}(t)= \frac{\partial \hat B_x}{\partial x}$$
 ]
 On a 2D surface we enforce:
 
-$$\mathcal{L}\text{div} = \lambda\text{div},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
+$$\mathcal{L}_\text{div} = \lambda_\text{div},\bigl|\partial_x \hat B_x + \partial_y \hat B_y\bigr|_2^2$$
 
 	
  #### 3. Total Loss
 
-$$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
+$$\mathcal{L} = \mathcal{L}_\text{MSE} + \mathcal{L}_\text{div}$$
 
 
 ⸻
@@ -98,7 +98,7 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 •	Qualitative fidelity: magnetogram predictions align closely with ground truth (see visualizations/).
 
-•	Physical consistency: divergence loss keeps $\nabla\cdot \mathbf{B}4 near zero (<1e-3 average).
+•	Physical consistency: divergence loss keeps $\nabla\cdot \mathbf{B}$ near zero (<1e-3 average).
 
 •	Adaptive cost: solver calls (NFE) adjust per tolerance; overall training remains tractable.
 
