@@ -2,6 +2,10 @@
 
 _A physics-informed, continuous-time model for forecasting the Sun’s surface magnetic vector field._
 
+## 👀 Sample
+
+<img width="518" alt="스크린샷 2025-05-14 오전 10 20 30" src="https://github.com/user-attachments/assets/f3f4ecff-eaae-4c7d-be67-55993b642d9a" />
+
 ---
 
 ## 📄 Overview
@@ -31,6 +35,11 @@ This repository implements a **Neural Ordinary Differential Equation** (Neural O
 
 ## 📊 Dataset
 
+<img width="518" alt="스크린샷 2025-05-14 오전 10 20 30" src="https://github.com/user-attachments/assets/f3f4ecff-eaae-4c7d-be67-55993b642d9a" />
+
+<img width="838" alt="스크린샷 2025-05-14 오전 10 41 38" src="https://github.com/user-attachments/assets/b1de4478-3de2-437d-855b-ea30d9a67b54" />
+
+
 We use the **HMI** (Helioseismic and Magnetic Imager) vector magnetogram data from NASA’s Solar Dynamics Observatory:
 
 1. **Data Selection**  
@@ -59,7 +68,7 @@ We combine standard data fidelity (MSE) with a divergence loss to enforce the ph
 
 $$\mathcal{L}_\text{MSE} = |\hat{\mathbf{h}} - \mathbf{h}|_2^2$$
 
-#### 2.	Divergence Loss
+#### 2.	Divergence Loss(Boundary Condition Loss)
 
 Solar magnetic fields are divergence-free ((\nabla\cdot \mathbf{B} = 0)). We approximate divergence on the 2D grid:
 
@@ -89,6 +98,21 @@ $$\mathcal{L} = \mathcal{L}\text{MSE} + \mathcal{L}\text{div}$$
 
 •	Learning rate: $1\times10^{-3}$
 
+### Ablation
+
+<img width="510" alt="스크린샷 2025-05-14 오전 10 21 22" src="https://github.com/user-attachments/assets/7b72b4a9-60fb-41bc-9a5e-fc66f1453cb4" />
+
+- The best performance occurred when the weight was 0.1, and increasing the weight led to an increase in loss.
+- Having a boundary condition with a weight of 0.1 performed better than having no boundart condition.
+- The data already contains the representation of the boundary condition, so larger weights introduced more noise.
+- A weight of 0.1 helped reduce the noise, resulting in better performance compared to no boundary condition.
+
+### Prediction Result
+
+<img width="518" alt="스크린샷 2025-05-14 오전 10 20 30" src="https://github.com/user-attachments/assets/f3f4ecff-eaae-4c7d-be67-55993b642d9a" />
+
+- The grid size increases, the loss tends to be higher.
+- Even a 10-unit difference in grid size leads to an exponential increase in data complexity.
 
 ⸻
 
